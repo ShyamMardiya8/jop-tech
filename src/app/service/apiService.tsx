@@ -89,6 +89,6 @@ export const uploadRequest = async ({
       return response.data
     }
     catch(err : any) {
-        console.log(err.message)
+        // console.log(err.message)
     }
 }
