@@ -1,13 +1,31 @@
-import axios from 'axios'
-
-const API_URL = 'http://localhost:5000'
+import {apiRequest} from './apiService'
 
 export const GET_HIRE_DETAILS = async () => {
-    try{
-        const response = await axios.get(`${API_URL}/api/company`)
-        return response.data
-    }
-    catch(err : any){
-        console.log(err.message)
-    }
+    return await apiRequest({
+        method: 'get',
+        endpoint: '/api/company',
+    })
+}
+
+export const CREATE_COMPANY = async (payload: any) => {
+    return await apiRequest({
+        method: 'post',
+        endpoint: '/api/company',
+        data: payload,
+    })
+}
+
+export const UPDATE_COMPANY = async (id: string, payload: any) => {
+    return await apiRequest({
+        method: 'put',
+        endpoint: `/company/${id}`,
+        data: payload,
+    })
+}
+
+export const DELETE_COMPANY = async (id: string) => {
+    return await apiRequest({
+        method: 'delete',
+        endpoint: `/company/${id}`,
+    })
 }
