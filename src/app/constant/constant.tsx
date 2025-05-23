@@ -1,3 +1,5 @@
+import { Country } from "../types/country";
+
 export const userInfo = [
   { key: "firstName", label: "First Name" },
   { key: "lastName", label: "Last Name" },
@@ -38,4 +40,18 @@ export const employeeInfo = [
   { key: "skills", label: "Skills" },
   { key: "languages", label: "Languages" },
   { key: "companyId", label: "Company ID" },
+];
+
+export const countries: Country[] = [
+  { code: 'US', name: 'United States', dialCode: '+1', flag: '🇺🇸', format: '(XXX) XXX-XXXX' },
+  { code: 'IN', name: 'India', dialCode: '+91', flag: '🇮🇳', format: 'XXXXX-XXXXX' },
+  { code: 'GB', name: 'United Kingdom', dialCode: '+44', flag: '🇬🇧', format: 'XXXXX XXXXXX' },
+  { code: 'FR', name: 'France', dialCode: '+33', flag: '🇫🇷', format: 'XX XX XX XX XX' },
+];
+
+export const skills = [
+  "HTML", "CSS", "JavaScript", "TypeScript", "React",
+  "Next.js", "Vue.js", "Angular", "Python", "Django",
+  "Flask", "Node.js", "Express", "Java", "Spring Boot",
+  "C#", ".NET", "PHP", "Laravel", "Go", "Rust", "Ruby", "Rails",
 ];

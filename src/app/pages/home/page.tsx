@@ -2,7 +2,11 @@
 import { COMPANY_HIRE_DETAILS } from "@/app/features/reducer/Slice";
 import { AppDispatch } from "@/app/lib/store/store";
 import React, { useEffect, useState } from "react";
+import Input from '@/app/component/Input'
 import { useDispatch } from "react-redux";
+import Phone from "@/app/component/Phone";
+import FileInput from "@/app/component/FileInput";
+import SkillInput from "@/app/component/SkillInput";
 
 const page = () => {
   const [data, setData] = useState<any>([]);
@@ -17,7 +21,12 @@ const page = () => {
   }, []);
 console.log(data, "data")
   return (
-    <p>home page is ready</p>
+    <>
+    <p>testing</p>
+    <Phone />
+    <FileInput />
+    <SkillInput />
+    </>
   )
 };
 
